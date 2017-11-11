@@ -1,0 +1,65 @@
+<html>
+<h2>Hello Velocity Templating Engine</h2>
+
+    #set( $startrow = 0)
+    #set( $count = $current + 1 )
+    #set( $isReady = ( $isOn && $isOpen) )
+#*===========================================*#
+
+    #if( $value > 5 )
+    bigger
+    #elseif( $value < 5 )
+    smaller
+    #else
+    just right
+    #end
+
+#*===========================================*#
+
+    #foreach( $item in $itemList )
+    My $item.
+    #end
+#*===========================================*#
+<table>
+    <tr><td> #parse( $header ) </td></tr>
+    <tr><td> #parse( $body ) </td></tr>
+    <tr><td> #parse( $footer ) </td></tr>
+</table>
+
+#*===========================================*#
+    #macro( select $name $displayname $choicelist )
+    <SELECT name=$name>
+        <option value="">$displayname</option>
+        #foreach( $choice in $choicelist )
+            <option value=$choice>$choice</option>
+        #end
+    </select>
+    #end
+
+Easy:
+Please choose:  #select( "size" "--SIZE--" $sizelist )
+#*===========================================*#
+
+    #set( $myint = 5 )
+    #set( $mystring = 'Hello There')
+    #set( $mybool = true )
+    #set( $objarr = [ "a", $myint, $mystring, false ] )
+    #set( $intrangearr = [1..10] )
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+#*===========================================*#
+
+</html>

@@ -1,0 +1,14 @@
+/**
+ * Created by Khomeni on 16-May-17.
+ */
+
+.err-msg {
+    color: #ff6f37;
+    font-style: italic;
+}
+
+.date-picker {
+    cursor: pointer !important;
+}
+
+

@@ -1,0 +1,4 @@
+
+### Errors Showing Techniques
+<@spring.showErrors " & ", "err-msg" /> // after inputs
+<#list spring.status.errorMessages as error> <b class="err-msg">${error}</b> <br> </#list> // after inputs

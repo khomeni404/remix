@@ -1,0 +1,10 @@
+@OneToMany(fetch = FetchType.EAGER, mappedBy = "feesRegister")
+@Fetch(FetchMode.SELECT)
+private List<Trim> trimList = new ArrayList<>(0);
+
+@ManyToMany(fetch = FetchType.LAZY) //EAGER
+@Fetch(FetchMode.SELECT)
+@JoinTable(name = "T23_PO_SHEET_SUPPLIER",
+    joinColumns = {@JoinColumn(name = "authority_id", referencedColumnName = "id")},
+    inverseJoinColumns = {@JoinColumn(name = "operation_id", referencedColumnName = "id")})
+private List<Supplier> supplierList;
